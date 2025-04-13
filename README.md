@@ -31,8 +31,10 @@ This project is made so all the elements are displayed correctly on popular scre
   
 ![Project at desktop viewport size](./images/Screenshot%202025-04-13%20at%204.27.26 PM.png)
 ![project at phone viewport size](./images/Screenshot%202025-04-13%20at%204.27.04 PM.png)
-![project at tablet viewport size](./images/Screenshot%202025-04-13%20at%204.26.55 PM.png)
-
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
+![project at tablet viewport size](./images/Screenshot%202025-04-13%20at%204.26.55 PM.png) 
   
-Good luck and have fun!
+**Link to deployed project on github**
+
+https://alysha-alix.github.io/se_project_spots/
+
+
