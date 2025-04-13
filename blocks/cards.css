@@ -1,0 +1,21 @@
+.cards {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  padding:0;
+  border-bottom-color: rgba(33, 33, 33, 0.4);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+.cards__list {
+  list-style-type: none;
+  margin:0;
+  padding:0;
+  width:1280px;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, 413px);
+  grid-gap: 40px 20px;
+  justify-content: center;
+  padding-bottom:40px;
+}
