@@ -6,6 +6,8 @@
 
 .profile__avatar {
   border-radius:8px;
+  height:190px;
+  width:190px;
 }
 
 
@@ -20,6 +22,11 @@
   font-weight:500;
   font-size:32px;
   line-height: 1;
+  color:rgba(33,33,33,1);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-width:420px;
 }
 
 .profile__description {
@@ -28,11 +35,16 @@
   font-size: 16px;
   line-height: 1;
   opacity:70%;
+  color:rgb(33,33,33,);
+  display:-webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-width:420px;
 }
 
 .profile__edit-btn {
   margin-top:auto;
-  background:none;
+  background:transparent;
   font-weight:500;
   font-size: 16px;
   line-height: 1;
@@ -41,6 +53,8 @@
   gap:8px;
   border:none;
   cursor: pointer;
+  padding:0;
+  color:rgba(33, 33, 33, 1);
 }
 
 .profile__edit-btn:hover {
@@ -48,8 +62,8 @@
 }
 
 .profile__new-post-btn {
-  color: #fff;
-  background-color: black;
+  color: rgba(252, 245, 229, 1);
+  background-color: rgba(33, 33, 33, 1);
   margin-left:auto;
   margin-top:auto;
   border-radius: 8px;
@@ -59,6 +73,7 @@
   font-size: 16px;
   line-height: 1;
   cursor: pointer;
+  border:none;
 }
 
 .profile__new-post-btn:hover {
@@ -89,6 +104,7 @@
   .profile__name {
     font-size: 20px;
     margin: 0 0 6px;
+    max-width:288px;
   }
 
   .profile__description {

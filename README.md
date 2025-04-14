@@ -8,7 +8,7 @@
   
 **Description**
 
-This website was created to display a users profile and make it interactivevfor both profile owner and views. Also to make it responsive for different screen sizes.
+This website was created to display a users profile and make it interactive for both profile owner and views. Also to make it responsive for different screen sizes.
 
 **Intro**
   
@@ -36,5 +36,9 @@ This project is made so all the elements are displayed correctly on popular scre
 **Link to deployed project on github**
 
 https://alysha-alix.github.io/se_project_spots/
+
+**Link to project video on google drive**
+
+https://drive.google.com/file/d/1pGJl00XahDnsa_pdFHrYjWMeqPHDq6rd/view?usp=sharing
 
 

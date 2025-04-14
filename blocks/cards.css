@@ -1,6 +1,4 @@
 .cards {
-  display: flex;
-  justify-content: space-around;
   margin-top: 20px;
   padding:0;
   border-bottom-color: rgba(33, 33, 33, 0.4);
@@ -12,10 +10,18 @@
   list-style-type: none;
   margin:0;
   padding:0;
-  width:1280px;
   display:grid;
   grid-template-columns: repeat(auto-fit, 413px);
   grid-gap: 40px 20px;
   justify-content: center;
   padding-bottom:40px;
+}
+
+@media screen and (max-width: 560px) {
+  .cards__list {
+    padding-bottom:0;
+    grid-template-columns: repeat(auto-fit,288px);
+    grid-gap: 20px 0;
+
+  }
 }
