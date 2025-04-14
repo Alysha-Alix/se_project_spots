@@ -20,6 +20,7 @@
   white-space: nowrap;
   overflow: hidden;
   max-width: 353px;
+  color: rgba(33, 33, 33, 1)
 }
 
 .card__like-btn {
@@ -52,5 +53,10 @@
   .card__like-btn {
     width:20px;
     height:18px;
+  }
+
+  .card__image {
+    width:288px;
+    height:318px;
   }
 }
