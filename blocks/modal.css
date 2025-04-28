@@ -1,0 +1,130 @@
+.modal {
+  visibility: hidden;
+  position:fixed;
+  background-color: rgba(0,0,0,.5);
+  top: 0;
+  right:0;
+  bottom: 0;
+  left: 0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal_is-opened {
+  visibility: visible;
+}
+
+.modal__container {
+  position:relative;
+  background-color: rgba(255,255,255,1);
+  max-width: 630px;
+  width: 100%;
+  border-radius: 8px;
+  padding: 32px 50px;
+  display: flex;
+  flex-direction: column;
+  margin:0 10px;
+}
+
+.modal__close-btn {
+  position:absolute;
+  width:40px;
+  height:40px;
+  padding:0;
+  border:none;
+  background:transparent;
+  top:32px;
+  right:50px;
+  color:rgb(33,33,33);
+  opacity:40%;
+}
+
+.modal__close-btn:hover {
+  cursor: pointer;
+  color:rgba(33,33,33,1);
+}
+
+.modal__title {
+  font-weight: 500;
+  font-size: 32px;
+  color:rgba(33,33,33,1);
+  margin:0 0 32px;
+}
+
+.modal__form {
+  display:flex;
+  flex-direction: column;
+  padding:0 12px 0 0;
+}
+
+.modal__label {
+  margin-bottom:32px;
+  font-weight:500;
+  font-size: 16px;
+  line-height: 110%;
+}
+
+.modal__input {
+  display:block;
+  width: 100%;
+  border:1px;
+  border-style:solid;
+  border-color: rgba(33, 33, 33, 0.4);
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 16px 0 16px 12px;
+  margin:8px 0;
+}
+
+.modal__input::placeholder {
+  color:#2121214d;
+}
+
+.modal__input:hover {
+  border-color: rgba(33,33,33,1);
+  cursor: pointer;
+}
+
+.modal__submit-btn {
+  color: rgba(252, 245, 229, 1);
+  background-color: rgba(33, 33, 33, 1);
+  border-radius: 8px;
+  height: 52px;
+  max-width: 156px;
+  font-weight:500;
+  font-size: 16px;
+  border:none;
+}
+
+.modal__submit-btn:hover {
+  cursor:pointer;
+}
+
+@media screen and (max-width:360px) {
+  .modal__container {
+    padding: 12px 12px;
+  }
+
+  .modal__title {
+    font-size:20px;
+    margin-bottom:34px;
+  }
+
+  .modal__close-btn {
+    top:12px;
+    right:12px;
+  }
+
+  .modal__input {
+    font-size: 16px;
+    line-height: 1;
+    width:100%;
+  }
+
+  .modal__submit-btn {
+    max-width:none;
+  }
+
+}
