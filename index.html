@@ -117,7 +117,7 @@
       <footer class="footer">
         <p class="footer__copyright">2025 &copy; Spots</p>
       </footer>
-      <div class="modal modal_is-opened">
+      <div class="modal">
         <div class="modal__container">
           <button class="modal__close-btn" type="button">
             <img
@@ -141,6 +141,35 @@
               type="text"
               class="modal__input"
               placeholder="Describe yourself">
+            </label>
+            <button class="modal__submit-btn" type="submit">Save</button>
+          </form>
+        </div>
+      </div>
+      <div class="modal modal_is-opened">
+        <div class="modal__container">
+          <button class="modal__close-btn" type="button">
+            <img
+            src="./images/Group 27.svg"
+            alt="Exit icon"
+            class="modal__exit-btn">
+          </button>
+          <h2 class="modal__title">New post</h2>
+          <form class="modal__form">
+            <label for="card-image-input" class="modal__label">
+              Image link
+              <input
+              id="card-image-input"
+              type="url"
+              class="modal__input"
+              placeholder="Paste a link to the picture">
+            </label>
+            <label for="card-caption-input" class="modal__label">
+              Caption
+              <input id="card-caption-input"
+              type="text"
+              class="modal__input"
+              placeholder="Type your caption">
             </label>
             <button class="modal__submit-btn" type="submit">Save</button>
           </form>
