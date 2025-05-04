@@ -40,7 +40,6 @@
   background:transparent;
   top:32px;
   right:50px;
-  color:rgb(33,33,33);
   opacity:40%;
 }
 
@@ -102,16 +101,16 @@
   font-weight:500;
   font-size: 16px;
   border:none;
-  opacity:0.8;
 }
 
 .modal__submit-btn:hover {
   cursor:pointer;
+  opacity:0.8;
 }
 
 @media screen and (max-width:360px) {
   .modal__container {
-    padding: 12px 12px;
+    padding: 22px 12px 12px;
   }
 
   .modal__label {
