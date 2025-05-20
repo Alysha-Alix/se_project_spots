@@ -141,13 +141,15 @@
 .modal__caption {
   color: white;
   background-color: #212121;
-  max-width: 214px;
-  max-height: 32px;
   border-radius: 8px;
   font-weight: 500;
   font-size:20px;
   line-height: 120%;
-  text-align: center;
+  left:0;
+  top: calc(100% +10px);
+  position:absolute;
+  margin:0;
+  padding:4px 8px;
 }
 
 @media screen and (max-width:560px) {
@@ -162,6 +164,10 @@
   .modal__title {
     font-size:20px;
     margin-bottom:34px;
+  }
+
+  .modal__caption {
+    font-size: 16px;
   }
 
   .modal__close-btn {
