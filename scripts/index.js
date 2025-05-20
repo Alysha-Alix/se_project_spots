@@ -1,38 +1,7 @@
-const initialCards = [
-  {
-    name: "Golden Gate Bridge",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg"
-  },
-  {
-    name: "Val Thorens",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/1-photo-by-moritz-feldmann-from-pexels.jpg"
-  },
-  {
-    name: "Restaurant terrace",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/2-photo-by-ceiline-from-pexels.jpg"
-  },
-  {
-    name: "An outdoor cafe",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/3-photo-by-tubanur-dogan-from-pexels.jpg"
-  },
-  {
-    name: "A very ling bridge, over the forest and through the trees",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/4-photo-by-maurice-laschet-from-pexels.jpg"
-  },
-  {
-    name: "Tunnel with morning light",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/5-photo-by-van-anh-nguyen-from-pexels.jpg"
-  },
-  {
-    name: "Mountain house",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg"
-  }
-]
-
 const editProfileBtn = document.querySelector(".profile__edit-btn");
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const editProfileCloseBtn = editProfileModal.querySelector(".modal__close-btn");
-const editProfileForm = editProfileModal.querySelector(".modal__form")
+const editProfileForm = editProfileModal.querySelector(".modal__form");
 const editProfileNameInput = editProfileModal.querySelector("#profile-name-input");
 const editProfileDescriptionInput = editProfileModal.querySelector("#profile-description-input");
 
@@ -68,11 +37,12 @@ function getCardElement(data) {
   cardImageEl.alt = data.name;
   cardTitleEl.textContent = data.name;
 
-const cardLikeBtn = cardElement.querySelector(".card__like-btn")
+  const cardLikeBtn = cardElement.querySelector(".card__like-btn")
 cardLikeBtn.addEventListener("click", () => {
   cardLikeBtn.classList.toggle("card__like-btn_active")
 });
-const cardDeleteBtn = cardElement.querySelector(".card__delete-btn")
+
+  const cardDeleteBtn = cardElement.querySelector(".card__delete-btn")
 cardDeleteBtn.addEventListener("click", () => {
 cardElement.remove();
 });
@@ -110,25 +80,23 @@ modalCloseBtn.addEventListener("click", function() {
 
 newPostBtn.addEventListener("click", function () {
   openModal(newPostModal);
-  newPostImageInput.value = profileCardImage.src;
-  newPostCaptionInput.value = profileCardTitle.textContent;
 });
 
 newPostCloseBtn.addEventListener("click", function () {
   closeModal(newPostModal);
 });
 
-function handleEditProfileSubmit (evt) {
-  evt.preventDefault ();
+function handleEditProfileSubmit(evt) {
+  evt.preventDefault();
   profileNameEl.textContent = editProfileNameInput.value;
   profileDescriptionEl.textContent = editProfileDescriptionInput.value;
-  editProfileModal.classList.remove("modal_is-opened")
+  closeModal(editProfileModal);
 }
 
 editProfileForm.addEventListener("submit", handleEditProfileSubmit);
 
-function handleNewPostSubmit (evt) {
-  evt.preventDefault ();
+function handleNewPostSubmit(evt) {
+  evt.preventDefault();
 
   const cardElement = getCardElement({
     name: newPostCaptionInput.value,
@@ -136,7 +104,8 @@ function handleNewPostSubmit (evt) {
   });
   cardsList.prepend(cardElement);
 
-  newPostModal.classList.remove("modal_is-opened")
+  closeModal(newPostModal);
+  newPostForm.reset();
 }
 
 newPostForm.addEventListener("submit", handleNewPostSubmit);

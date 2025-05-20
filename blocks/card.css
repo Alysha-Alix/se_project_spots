@@ -10,6 +10,7 @@
   object-fit: cover;
   display: block;
   margin-bottom:12px;
+  cursor:pointer;
 }
 
 .card__title {
@@ -38,14 +39,17 @@
 .card__like-btn_active {
   background-image: url(../images/State=Liked.svg);
   opacity:1;
+  background-repeat: no-repeat;
 }
 
 .card__like-btn:hover {
     opacity:100%;
+    cursor: pointer;
 }
 
 .card__like-btn_active:hover {
   opacity: .5;
+  cursor:pointer;
 }
 
 .card__delete-btn {
@@ -56,11 +60,12 @@
   width:32px;
   height:32px;
   top:10px;
-  left:371px;
+  right:10px;
 }
 
 .card__delete-btn:hover {
   background-image: url(../images/State=Hover.svg);
+  cursor:pointer;
 }
 
 .card__content {
