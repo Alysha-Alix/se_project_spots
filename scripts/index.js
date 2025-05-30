@@ -8,6 +8,7 @@ const editProfileDescriptionInput = editProfileModal.querySelector("#profile-des
 
 const newPostBtn = document.querySelector(".profile__new-post-btn");
 const newPostModal = document.querySelector("#new-post-modal");
+const newPostSubmitBtn = newPostModal.querySelector(".modal__submit-btn")
 const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
 const newPostForm = newPostModal.querySelector(".modal__form");
 const newPostImageInput = newPostModal.querySelector("#card-image-input");
@@ -65,9 +66,11 @@ function closeModal(modal) {
 }
 
 editProfileBtn.addEventListener("click", function () {
-  openModal(editProfileModal);
+
   editProfileNameInput.value = profileNameEl.textContent;
   editProfileDescriptionInput.value = profileDescriptionEl.textContent;
+  resetValidation(editProfileForm, [editProfileNameInput, editProfileDescriptionInput])
+  openModal(editProfileModal);
 });
 
 editProfileCloseBtn.addEventListener("click", function() {
@@ -103,7 +106,7 @@ function handleNewPostSubmit(evt) {
     link: newPostImageInput.value
   });
   cardsList.prepend(cardElement);
-
+  disableButton(newPostSubmitBtn, settings);
   closeModal(newPostModal);
   newPostForm.reset();
 }
