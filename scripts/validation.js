@@ -2,19 +2,19 @@ const config = {
   formSelector: ".modal__form",
   inputSelector: ".modal__input",
   submitButtonSelector: ".modal__submit-btn",
-  inactiveButtonClass: "modal__submit-btn-disabled",
+  inactiveButtonClass: "modal__submit-btn_disabled",
   inputErrorClass: "modal__input_error_state",
-  errorClass: "modal__error"
-}
+  errorClass: "modal__error",
+};
 
-const showInputError = (formEl,inputEl, errorMsg, config) => {
+const showInputError = (formEl, inputEl, errorMsg, config) => {
   const errorMsgEl = formEl.querySelector(`#${inputEl.id}-error`);
-    errorMsgEl.textContent = errorMsg;
-    inputEl.classList.add(config.inputErrorClass);
+  errorMsgEl.textContent = errorMsg;
+  inputEl.classList.add(config.inputErrorClass);
 };
 
 const hideInputError = (formEl, inputEl, config) => {
- const errorMsgEl = formEl.querySelector(`#${inputEl.id}-error`);
+  const errorMsgEl = formEl.querySelector(`#${inputEl.id}-error`);
   errorMsgEl.textContent = "";
   inputEl.classList.remove(config.inputErrorClass);
 };
@@ -35,7 +35,7 @@ const hasInvalidInput = (inputList, config) => {
 
 const toggleButtonState = (inputList, buttonEl, config) => {
   if (hasInvalidInput(inputList, config)) {
-   disableButton(buttonEl, config);
+    disableButton(buttonEl, config);
   } else {
     buttonEl.disabled = false;
     buttonEl.classList.remove(config.inactiveButtonClass);
@@ -45,7 +45,7 @@ const toggleButtonState = (inputList, buttonEl, config) => {
 const disableButton = (buttonEl, config) => {
   buttonEl.disabled = true;
   buttonEl.classList.add(config.inactiveButtonClass);
-}
+};
 
 const resetValidation = (formEl, inputList, config) => {
   inputList.forEach((inputEl) => {
@@ -63,12 +63,12 @@ const setEventListeners = (formEl, config) => {
     inputEl.addEventListener("input", function () {
       checkInputValidity(formEl, inputEl, config);
       toggleButtonState(inputList, buttonEl, config);
-   });
+    });
   });
 };
 
 const enableValidation = (config) => {
-  const formList = document.querySelectorAll(".modal__form");
+  const formList = document.querySelectorAll(config.formSelector);
   formList.forEach((formEl) => {
     setEventListeners(formEl, config);
   });

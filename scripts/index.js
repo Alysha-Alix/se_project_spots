@@ -20,12 +20,12 @@ const profileCardImage = document.querySelector(".card__image");
 const profileCardTitle = document.querySelector(".card__title");
 
 const imageModal = document.querySelector("#image-modal");
-const modalCloseBtn = imageModal.querySelector(".modal__close-btn");
+const imageModalCloseBtn = imageModal.querySelector(".modal__close-btn");
 const modalContainer = document.querySelector(".modal__container");
 const imageEl = imageModal.querySelector(".modal__image");
 const modalCaption = imageModal.querySelector(".modal__caption");
 const inputList = Array.from(document.querySelectorAll(config.inputSelector));
-const modal = document.querySelectorAll(".modal");
+const allModals = document.querySelectorAll(".modal");
 
 const cardTemplate = document
   .querySelector("#card-template")
@@ -42,13 +42,13 @@ function getCardElement(data) {
   cardTitleEl.textContent = data.name;
 
   const cardLikeBtn = cardElement.querySelector(".card__like-btn")
-cardLikeBtn.addEventListener("click", () => {
+  cardLikeBtn.addEventListener("click", () => {
   cardLikeBtn.classList.toggle("card__like-btn_active")
 });
 
   const cardDeleteBtn = cardElement.querySelector(".card__delete-btn")
-cardDeleteBtn.addEventListener("click", () => {
-cardElement.remove();
+  cardDeleteBtn.addEventListener("click", () => {
+    cardElement.remove();
 });
 
 cardImageEl.addEventListener("click", () => {
@@ -79,7 +79,7 @@ editProfileCloseBtn.addEventListener("click", function() {
   closeModal(editProfileModal);
 });
 
-modalCloseBtn.addEventListener("click", function() {
+imageModalCloseBtn.addEventListener("click", function() {
   closeModal(imageModal);
 });
 
@@ -120,7 +120,7 @@ initialCards.forEach(function (item) {
   cardsList.append(cardElement);
 });
 
-document.querySelectorAll(".modal").forEach(function (modal) {
+allModals.forEach(function (modal) {
 modal.addEventListener("click", (evt) => {
   if (evt.target === modal) {
     closeModal(modal);
@@ -128,7 +128,7 @@ modal.addEventListener("click", (evt) => {
 });
 });
 
-document.querySelectorAll(".modal").forEach(function (modal) {
+allModals.forEach(function (modal) {
 document.addEventListener("keydown", (evt) => {
   if (evt.key === "Escape" && ".modal_is-opened") {
     closeModal(modal);
