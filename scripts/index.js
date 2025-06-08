@@ -62,12 +62,12 @@ cardImageEl.addEventListener("click", () => {
 
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
-  document.addEvenetListener("keydown", handleEscape);
+  document.addEventListener("keydown", handleEscape);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
-  document.removerEventListner("keydown", handleEscape);
+  document.removeEventListener("keydown", handleEscape);
 }
 
 editProfileBtn.addEventListener("click", function () {
@@ -133,5 +133,6 @@ modal.addEventListener("click", (evt) => {
 function handleEscape (evt) {
   if (evt.key === "Escape") {
     const openedPopup = document.querySelector(".modal_is-opened");
+    closeModal(openedPopup);
   }
 }
